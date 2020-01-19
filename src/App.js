@@ -17,7 +17,7 @@
     }
     componentDidMount(){
       if(this.state.token){ 
-        fetch('http://127.0.0.1:8000/api/movies/', {
+        fetch(`${process.env.REACT_APP_API_URL}api/movies/`, {
             method: 'GET',
             headers: {
               'Authorization': `Token ${this.state.token}`
